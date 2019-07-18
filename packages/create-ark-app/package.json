@@ -1,0 +1,27 @@
+{
+  "name": "@arkitect/create-ark-app",
+  "version": "0.0.0",
+  "description": "CLI tool for bootstrapping modern web app project architecture.",
+  "keywords": [
+    "arkitect",
+    "server side rendered",
+    "ssr",
+    "universal",
+    "isomorphic",
+    "webpack",
+    "react",
+    "vue"
+  ],
+  "author": "Nikko Yi Luo <levblanc@gmail.com> (https://levblanc.com)",
+  "license": "SEE LICENSE IN LICENSE.MIT",
+  "bin": {
+    "create-ark-app": "bin/create-ark-app.js"
+  },
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/levblanc/arkitect.git"
+  },
+  "bugs": "https://github.com/levblanc/arkitect/issues",
+  "homepage": "https://github.com/levblanc/arkitect#readme"
+}

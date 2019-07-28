@@ -1,3 +1,5 @@
+const prettierConfigs = require('./.prettierrc.js');
+
 module.exports = {
   env: {
     browser: true,
@@ -13,5 +15,6 @@ module.exports = {
   extends: ['plugin:prettier/recommended'],
   rules: {
     'linebreak-style': ['error', 'unix'],
-  }
-}
+    'prettier/prettier': ['error', prettierConfigs],
+  },
+};

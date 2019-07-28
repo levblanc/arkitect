@@ -1,8 +1,8 @@
-"use strict";
+'use strict';
 
-const path = require("path");
-const spawn = require("cross-spawn");
-const chalk = require("chalk");
+const path = require('path');
+const spawn = require('cross-spawn');
+const chalk = require('chalk');
 const script = process.argv[2];
 const args = process.argv.slice(3);
 
@@ -11,13 +11,13 @@ const resolveScriptPath = script => {
 };
 
 switch (script) {
-  case "lint":
-  case "format":
+  case 'lint':
+  case 'format':
     const { status } = spawn.sync(
-      "node",
+      'node',
       [resolveScriptPath(script)].concat(args),
       {
-        stdio: "inherit"
+        stdio: 'inherit',
       }
     );
     process.exit(status);
@@ -26,8 +26,8 @@ switch (script) {
   default:
     console.log(chalk.red(`Unknown script '${script}'.`));
     console.log(
-      chalk.red(`Check the following link for ark-scripts available.`)
+      chalk.red('Check the following link for ark-scripts available.')
     );
-    console.log(chalk.red("https://github.com/levblanc/arkitect#readme"));
+    console.log(chalk.red('https://github.com/levblanc/arkitect#readme'));
     break;
 }

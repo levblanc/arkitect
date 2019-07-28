@@ -13,7 +13,7 @@
     "vue"
   ],
   "author": "Nikko Yi Luo <levblanc@gmail.com> (https://levblanc.com)",
-  "license": "SEE LICENSE IN LICENSE.MIT",
+  "license": "SEE LICENSE IN LICENSE",
   "bin": {
     "ark": "bin/ark-scripts.js"
   },

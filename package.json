@@ -13,8 +13,8 @@
     "vue"
   ],
   "author": "Nikko Yi Luo <levblanc@gmail.com> (https://levblanc.com)",
-  "license": "SEE LICENSE IN LICENSE.MIT",
   "scripts": {},
+  "license": "SEE LICENSE IN LICENSE",
   "engines": {
     "node": ">= 10",
     "npm": ">= 6"

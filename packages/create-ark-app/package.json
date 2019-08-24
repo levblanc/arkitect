@@ -35,5 +35,6 @@
     "fs-extra": "^8.1.0",
     "ora": "^3.4.0",
     "validate-npm-package-name": "^3.0.0"
-  }
+  },
+  "gitHead": "f07b53602933107a57911dee594c2da50af58fa1"
 }

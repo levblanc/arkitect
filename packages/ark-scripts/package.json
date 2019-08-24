@@ -47,5 +47,6 @@
     "standard-version": "^6.0.1",
     "webpack": "^4.36.1",
     "which": "^1.3.1"
-  }
+  },
+  "gitHead": "f07b53602933107a57911dee594c2da50af58fa1"
 }

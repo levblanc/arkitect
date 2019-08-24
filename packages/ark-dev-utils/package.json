@@ -1,6 +1,6 @@
 {
   "name": "@arkitect/ark-dev-utils",
-  "version": "0.2.0-alpha.0",
+  "version": "0.2.1-alpha.0",
   "description": "Utilities for project Arkitect.",
   "author": "Nikko Yi Luo <levblanc@gmail.com> (https://levblanc.com)",
   "homepage": "https://github.com/levblanc/arkitect/tree/master/packages/ark-dev-utils#readme",

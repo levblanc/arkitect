@@ -14,6 +14,9 @@
   ],
   "author": "Nikko Yi Luo <levblanc@gmail.com> (https://levblanc.com)",
   "license": "SEE LICENSE IN LICENSE",
+  "publishConfig": {
+    "access": "public"
+  },
   "bin": {
     "ark": "bin/ark-scripts.js"
   },

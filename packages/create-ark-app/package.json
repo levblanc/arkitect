@@ -1,6 +1,6 @@
 {
   "name": "@arkitect/create-ark-app",
-  "version": "0.0.0",
+  "version": "0.1.0-alpha.0",
   "description": "CLI tool for bootstrapping modern web app project architecture.",
   "keywords": [
     "arkitect",

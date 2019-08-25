@@ -4,12 +4,12 @@
   "description": "Utilities for project Arkitect.",
   "author": "Nikko Yi Luo <levblanc@gmail.com> (https://levblanc.com)",
   "homepage": "https://github.com/levblanc/arkitect/tree/master/packages/ark-dev-utils#readme",
-  "license": "SEE LICENSE IN LICENSE",
+  "license": "MIT",
   "directories": {
     "test": "__tests__"
   },
   "files": [
-    "lib"
+    "logger.js"
   ],
   "publishConfig": {
     "access": "public"
@@ -17,9 +17,6 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/levblanc/arkitect.git"
-  },
-  "scripts": {
-    "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "bugs": {
     "url": "https://github.com/levblanc/arkitect/issues"

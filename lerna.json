@@ -5,7 +5,8 @@
   "version": "independent",
   "command": {
     "version": {
-      "conventionalCommits": true
+      "conventionalCommits": true,
+      "changelogPreset": "angular"
     }
   }
 }

@@ -56,7 +56,7 @@ exports.spinner = () => {
       spinner.fail(chalk.red(msg))
     }
 
-    const info = () => {
+    const info = (msg) => {
       spinner.info(chalk.blue(msg))
     }
 

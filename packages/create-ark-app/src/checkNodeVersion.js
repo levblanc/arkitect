@@ -1,6 +1,6 @@
 'use strict'
 
-const logger = require('./logger')
+const logger = require('@arkitect/ark-dev-utils/logger')
 
 module.exports = () => {
     const nodeVersion = process.versions.node

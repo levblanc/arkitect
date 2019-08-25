@@ -1,6 +1,6 @@
 {
   "name": "@arkitect/ark-scripts",
-  "version": "0.2.3-alpha.0",
+  "version": "0.2.3-alpha.1",
   "description": "Scripts for creating modern web apps.",
   "keywords": [
     "arkitect",
@@ -31,7 +31,7 @@
   "bugs": "https://github.com/levblanc/arkitect/issues",
   "homepage": "https://github.com/levblanc/arkitect#readme",
   "dependencies": {
-    "@arkitect/ark-dev-utils": "^0.2.3-alpha.0",
+    "@arkitect/ark-dev-utils": "^0.3.0-alpha.0",
     "@commitlint/cli": "^8.1.0",
     "@commitlint/config-conventional": "^8.1.0",
     "chalk": "^2.4.2",

@@ -6,7 +6,7 @@ exports.bold = (msg) => {
 }
 
 exports.info = (msg) => {
-  console.log(chalk.grey(msg));
+  console.log(chalk.blue(msg));
 }
 
 exports.success = (msg) => {

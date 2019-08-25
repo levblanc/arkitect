@@ -21,17 +21,25 @@ exports.error = (msg) => {
   console.error(chalk.red(msg))
 }
 
-exports.errorList = (errorList) => {
-  if (!errorList || !Array.isArray(errorList)) {
+exports.warning = (msg) => {
+  console.log(chalk.yellow(msg))
+}
+
+exports.list = (msgList, type = 'error') => {
+  if (!msgList || !Array.isArray(msgList)) {
     console.error(chalk.red(
-      'Error in logger.errorList. Param "errorList" is ' + errorList + '.\n'
+      'Error in logger.msgList. Param "msgList" is ' + msgList + '.\n'
     ))
 
     return
   }
 
-  errorList.forEach((error) => {
-    console.error(chalk.red(`* ${error}`))
+  const coloredText = type === 'error' 
+    ? chalk.red
+    : chalk.yellow
+
+  msgList.forEach((item) => {
+    console.log(coloredText(`* ${item}`))
   })
 }
 

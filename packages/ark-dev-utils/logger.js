@@ -56,35 +56,45 @@ exports.green = (msg) => {
 }
 
 exports.spinner = () => {
-    let spinner
+  let spinner
 
-    const start = (msg) => {
-      spinner = ora(msg)
-      spinner.color = 'blue'
-      spinner.start()
-    }
+  const start = (msg) => {
+    spinner = ora(msg)
+    spinner.color = 'blue'
+    spinner.start()
+  }
 
-    const stop = () => {
-      spinner.stop()
-    }
+  const stop = () => {
+    spinner.stop()
+  }
 
-    const success = (msg) => {
-      spinner.succeed(chalk.green(msg))
-    }
+  const success = (msg) => {
+    spinner.succeed(chalk.green(msg))
+  }
 
-    const fail = (msg) => {
-      spinner.fail(chalk.red(msg))
-    }
+  const fail = (msg) => {
+    spinner.fail(chalk.red(msg))
+  }
 
-    const info = (msg) => {
-      spinner.info(chalk.blue(msg))
-    }
+  const info = (msg) => {
+    spinner.info(chalk.blue(msg))
+  }
 
-    return {
-      start,
-      stop,
-      success,
-      fail,
-      info
-    }
+  return {
+    start,
+    stop,
+    success,
+    fail,
+    info
+  }
+}
+
+exports.spawnErr = ({ stack, errno, code }) => {
+  console.log(chalk.red('code', code));
+  console.log(chalk.red('errno', errno));
+  console.log(chalk.red(stack));
+}
+
+exports.spawnSignal = (signal) => {
+  return chalk.yellow(`Command terminated with signal ${signal}`);
 }

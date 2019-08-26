@@ -1,12 +1,13 @@
 'use strict';
 
 const program = require('commander')
+const fs = require('fs-extra')
 const logger = require('@arkitect/ark-dev-utils/logger')
 const packageJson = require('../package.json')
 const checkNodeVersion = require('../src/checkNodeVersion')
 const getEnvInfo = require('../src/getEnvInfo')
 const validateProjectName = require('../src/validateProjectName')
-// const initApp = require('../src/initApp')
+const initApp = require('../src/initApp')
 
 let appName;
 
@@ -67,3 +68,9 @@ if (!appName) {
 }
 
 validateProjectName(appName)
+
+initApp(appName, {
+  framework: vue ? 'vue' : 'react',
+  type,
+  verbose
+})

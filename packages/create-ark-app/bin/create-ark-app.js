@@ -1,6 +1,7 @@
 'use strict';
 
 const program = require('commander')
+const logger = require('@arkitect/ark-dev-utils/logger')
 const packageJson = require('../package.json')
 const checkNodeVersion = require('../src/checkNodeVersion')
 const getEnvInfo = require('../src/getEnvInfo')
@@ -50,5 +51,19 @@ const {
 // console.log('info', info);
 
 if (info) getEnvInfo()
+
+if (!appName) { 
+  const programName = 'create-ark-app'
+
+  logger.error('Please provide your project directory:')
+  console.log(`$ ${logger.cyan(programName)} ${logger.green('<project-dir>')}`)
+  console.log()
+  console.log('Example:')
+  console.log(`$ ${logger.cyan(programName)} ${logger.green('my-app')}`)
+  console.log()
+  logger.info(`Run ${logger.cyan(`${programName} --help`)} to see all options.`)
+
+  process.exit(1)
+}
 
 validateProjectName(appName)

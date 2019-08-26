@@ -34,12 +34,16 @@ exports.list = (msgList, type = 'error') => {
     return
   }
 
-  const coloredText = type === 'error' 
-    ? chalk.red
-    : chalk.yellow
+  const colorMap = {
+    error: 'red',
+    warning: 'yellow',
+    info: 'blue'
+  }
+
+  const coloredText = chalk[colorMap[type]]
 
   msgList.forEach((item) => {
-    console.log(coloredText(`* ${item}`))
+    console.log(coloredText(`  * ${item}`))
   })
 }
 

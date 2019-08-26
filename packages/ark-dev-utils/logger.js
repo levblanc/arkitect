@@ -43,6 +43,14 @@ exports.list = (msgList, type = 'error') => {
   })
 }
 
+exports.cyan = (msg) => {
+  return chalk.cyan(msg)
+}
+
+exports.green = (msg) => {
+  return chalk.green(msg)
+}
+
 exports.spinner = () => {
     let spinner
 

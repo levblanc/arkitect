@@ -64,11 +64,11 @@ exports.spinner = () => {
       spinner.stop()
     }
 
-    const success = () => {
+    const success = (msg) => {
       spinner.succeed(chalk.green(msg))
     }
 
-    const fail = () => {
+    const fail = (msg) => {
       spinner.fail(chalk.red(msg))
     }
 

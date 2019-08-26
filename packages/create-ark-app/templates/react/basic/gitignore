@@ -1,0 +1,50 @@
+# Check the following link for a tutorial on .gitignore file 
+# https://www.atlassian.com/git/tutorials/saving-changes/gitignore
+
+# Check the following link for an example .gitignore file for Node.js
+# https://github.com/github/gitignore/blob/master/Node.gitignore
+
+# Logs #
+########
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Dependency directories #
+##########################
+/node_modules
+
+# Compiled file directories #
+#############################
+/build
+/dist
+
+# Testing converage #
+#####################
+/coverage
+
+# dotenv environment variables file #
+#####################################
+.env
+.env.test
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Optional npm cache directory #
+################################
+.npm
+
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db

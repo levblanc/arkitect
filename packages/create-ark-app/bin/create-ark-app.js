@@ -1,19 +1,21 @@
 'use strict';
 
-const program = require('commander')
-const logger = require('@arkitect/ark-dev-utils/logger')
 const packageJson = require('../package.json')
 const checkNodeVersion = require('../src/checkNodeVersion')
+const { version, engines: { node: targetVersion } } = packageJson
+
+checkNodeVersion(targetVersion)
+
+const program = require('commander')
+const logger = require('@arkitect/ark-dev-utils/logger')
 const getEnvInfo = require('../src/getEnvInfo')
 const validateProjectName = require('../src/validateProjectName')
 const initApp = require('../src/initApp')
 
 let appName;
 
-checkNodeVersion()
-
 program
-  .version(packageJson.version)
+  .version(version)
   .arguments('<project-dir>')
   .usage('<project-dir> [option]')
   .action((name) => {

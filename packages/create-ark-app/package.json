@@ -33,7 +33,11 @@
     "cross-spawn": "^6.0.5",
     "envinfo": "^7.3.1",
     "fs-extra": "^8.1.0",
+    "semver": "^6.3.0",
     "validate-npm-package-name": "^3.0.0"
+  },
+  "engines": {
+    "node": ">=8.9"
   },
   "gitHead": "67f49913139763dd4f87f103df1bdf2e3733ee20"
 }

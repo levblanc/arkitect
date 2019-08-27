@@ -33,6 +33,7 @@ module.exports = async (appName, options) => {
   fsExtra.ensureDirSync(appName)
   logger.info(`Creating a new ${framework} app in:`)
   console.log(`${logger.green(appPath)}`)
+  console.log()
 
   // init package.json
   initPackageJson({ appPath, appName, type })

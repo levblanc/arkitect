@@ -1,16 +1,16 @@
 'use strict';
 
 const packageJson = require('../package.json')
-const checkNodeVersion = require('../src/checkNodeVersion')
+const checkNodeVersion = require('../lib/checkNodeVersion')
 const { version, engines: { node: targetVersion } } = packageJson
 
 checkNodeVersion(targetVersion)
 
 const program = require('commander')
 const logger = require('@arkitect/ark-dev-utils/logger')
-const getEnvInfo = require('../src/getEnvInfo')
-const validateProjectName = require('../src/validateProjectName')
-const initApp = require('../src/initApp')
+const getEnvInfo = require('../lib/getEnvInfo')
+const validateProjectName = require('../lib/validateProjectName')
+const initApp = require('../lib/initApp')
 
 let appName;
 

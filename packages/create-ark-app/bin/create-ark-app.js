@@ -1,7 +1,6 @@
 'use strict';
 
 const program = require('commander')
-const fs = require('fs-extra')
 const logger = require('@arkitect/ark-dev-utils/logger')
 const packageJson = require('../package.json')
 const checkNodeVersion = require('../src/checkNodeVersion')
@@ -53,7 +52,7 @@ const {
 
 if (info) getEnvInfo()
 
-if (!appName) { 
+if (!appName) {
   const programName = 'create-ark-app'
 
   logger.error('Please provide your project directory:')

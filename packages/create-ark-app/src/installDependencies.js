@@ -10,7 +10,7 @@ const isYarnInstalled = () => {
   result = spawn.sync(
     'yarnpkg',
     ['--version'],
-    { stdio: 'inherit' }
+    { stdio: 'ignore' }
   )
 
   return result.status === 0
@@ -60,8 +60,8 @@ module.exports = ({ appPath, framework, verbose }) => {
   // cd into project directory
   process.chdir(appPath)
 
-  const spinner = logger.spinner()
-  spinner.start('Installing the following dependencies, please wait......\n')
+  console.log()
+  logger.info('Installing the following dependencies, please wait......')
   logger.list(dependencies, 'info')
   console.log()
 
@@ -82,10 +82,12 @@ module.exports = ({ appPath, framework, verbose }) => {
   }
 
   if (result.status === 0) {
-    spinner.success('Project init success!')
-    logger.info(`Check ${appPath}`)
+    console.log()
+    logger.success('Installation finished. Project init success!')
+    console.log()
     logger.info(`Run "cd ${path.basename(appPath)}" to go inside your project.`)
     logger.info('Following commands are ready for you:')
+    console.log()
     // npm run dev 
     // npm run build
     // npm run prod

@@ -4,9 +4,9 @@ const fs = require('fs-extra')
 const path = require('path')
 const logger = require('@arkitect/ark-dev-utils/logger')
 
-module.exports = async ({templatePath, appPath, appName}) => {
+module.exports = async ({ templatePath, appPath, appName }) => {
   const spinner = logger.spinner()
-  spinner.start('App files initializing......')
+  spinner.start('Project files initializing......')
 
   try {
     await fs.copy(templatePath, appPath)
@@ -21,9 +21,9 @@ module.exports = async ({templatePath, appPath, appName}) => {
       path.resolve(appPath, './.gitignore')
     )
 
-    spinner.success('Init app files success!')
+    spinner.success(`Created project files for ${path.basename(appPath)}`)
   } catch (err) {
-    spinner.fail('App files init failed with error:')
+    spinner.fail('Project files init failed.')
     logger.error(err)
 
     process.exit(1)
